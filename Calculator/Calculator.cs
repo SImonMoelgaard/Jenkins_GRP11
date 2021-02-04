@@ -60,7 +60,7 @@ namespace Calculator
 
         public double AccumulatorMulti(double Multiend)
         {
-            return Accumulator * Multiend; 
+            return Accumulator * Multiend;
         }
 
         public double AccumulatorPower(double b)
