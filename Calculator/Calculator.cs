@@ -31,5 +31,10 @@ namespace Calculator
             return dividend / divisor;
         }
 
+        public void Clear()
+        {
+            Accumulator = 0;
+        }
+
     }
 }
