@@ -41,5 +41,14 @@ namespace Calculator
             return Accumulator + addend;
         }
 
+        public double AcumulatorSub (double Subend)
+        {
+            return Accumulator - Subend;
+        }
+
+        public double AcumulatorMulti (double Multiend)
+        {
+            return AcumulatorMulti * Multiend; 
+        }
     }
 }
