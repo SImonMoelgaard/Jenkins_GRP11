@@ -79,7 +79,7 @@ namespace Calculator.Test.Unit
         [TestCase()]
         public void ClearAcumilator()
         {
-            Assert.That(_uut.Clear(), Is.EqualTo(0));
+            Assert.Throws<InvalidOperationException>(() =>_uut.Clear());
         }
 
     }

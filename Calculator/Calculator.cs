@@ -37,7 +37,15 @@ namespace Calculator
 
         public void Clear()
         {
-            Accumulator = 0;
+            if (Accumulator==0)
+            {
+                throw new InvalidOperationException();
+            }
+            else
+            {
+                Accumulator = 0;
+            }
+            
         }
 
         public double AccumulatorAdd(double addend)
