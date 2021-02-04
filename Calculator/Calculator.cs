@@ -36,5 +36,10 @@ namespace Calculator
             Accumulator = 0;
         }
 
+        public double add(double addend)
+        {
+            return Accumulator + addend;
+        }
+
     }
 }
