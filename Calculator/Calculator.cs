@@ -5,7 +5,11 @@ namespace Calculator
     public class Calculator
     {
 
-        public double Accumulator { get; private set; }
+
+        public double Accumulator
+        { get; set; }
+        
+
         public double Add(double a, double b)
         {
             return a + b;
@@ -37,7 +41,7 @@ namespace Calculator
 
         public void Clear()
         {
-            if (Accumulator==0)
+            if (Accumulator == 0 )
             {
                 throw new InvalidOperationException();
             }
@@ -45,32 +49,38 @@ namespace Calculator
             {
                 Accumulator = 0;
             }
-            
+           
+
         }
 
         public double AccumulatorAdd(double addend)
         {
-            return Accumulator + addend;
+            Accumulator = Accumulator + addend;
+            return Accumulator;
         }
 
         public double AccumulatorSub (double Subend)
         {
-            return Accumulator - Subend;
+            Accumulator= Accumulator - Subend;
+            return Accumulator;
         }
 
         public double AccumulatorMulti(double Multiend)
         {
-            return Accumulator * Multiend;
+            Accumulator= Accumulator * Multiend;
+            return Accumulator;
         }
 
         public double AccumulatorPower(double b)
         {
-            return Math.Pow(Accumulator, b);
+            Accumulator = Math.Pow(Accumulator, b);
+            return Accumulator;
         }
 
         public double AccumulatorDivide(double divisor)
         {
-            return Accumulator / divisor;
+            Accumulator = Accumulator / divisor;
+            return Accumulator;
         }
     }
 }

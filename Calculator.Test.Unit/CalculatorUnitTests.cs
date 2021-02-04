@@ -69,11 +69,11 @@ namespace Calculator.Test.Unit
             Assert.That(_uut.Divide(divideend, divisor), Is.EqualTo(result));
         }
 
-        [TestCase(6, 9)]
-        public void AcumilatorAdd(double addend, double result)
+        [TestCase(2, 2,2,6)]
+        public void AcumilatorAdd(int a, int b, int c,int result)
         {
-            
-            Assert.That(_uut.AccumulatorAdd(addend), Is.EqualTo(result));
+            _uut.Accumulator = 4;
+            Assert.That(_uut.AccumulatorAdd(c), Is.EqualTo(result));
         }
 
         [TestCase()]
