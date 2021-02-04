@@ -76,7 +76,11 @@ namespace Calculator.Test.Unit
             Assert.That(_uut.AcumulatorAdd(addend), Is.EqualTo(result));
         }
 
-
+        [TestCase()]
+        public void ClearAcumilator()
+        {
+            Assert.That(_uut.Clear(), Is.EqualTo(0));
+        }
 
     }
 }
