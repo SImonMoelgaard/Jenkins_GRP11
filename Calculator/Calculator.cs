@@ -36,19 +36,29 @@ namespace Calculator
             Accumulator = 0;
         }
 
-        public double AcumulatorAdd(double addend)
+        public double AccumulatorAdd(double addend)
         {
             return Accumulator + addend;
         }
 
-        public double AcumulatorSub (double Subend)
+        public double AccumulatorSub (double Subend)
         {
             return Accumulator - Subend;
         }
 
-        public double AcumulatorMulti (double Multiend)
+        public double AccumulatorMulti(double Multiend)
         {
-            return AcumulatorMulti * Multiend; 
+            return Accumulator * Multiend; 
+        }
+
+        public double AccumulatorPower(double b)
+        {
+            return Math.Pow(Accumulator, b);
+        }
+
+        public double AccumulatorDivide(double divisor)
+        {
+            return Accumulator / divisor;
         }
     }
 }
