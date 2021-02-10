@@ -106,6 +106,23 @@ namespace Calculator.Test.Unit
 
 
 
+        [TestCase(2, 25)]
+        [TestCase(3, 125)]
+        [TestCase(4, 750)]
+        public void AcumilatorPower(int c, int result)
+        {
+            _uut.Accumulator = 5;
+            Assert.That(_uut.AccumulatorPower(c), Is.EqualTo(result));
+        }
+
+        [TestCase(2, 10)]
+        [TestCase(4, 5)]
+        [TestCase(10, 2)]
+        public void AcumilatorDivide(int c, int result)
+        {
+            _uut.Accumulator = 20;
+            Assert.That(_uut.AccumulatorDivide(c), Is.EqualTo(result));
+        }
 
 
         [TestCase()]
