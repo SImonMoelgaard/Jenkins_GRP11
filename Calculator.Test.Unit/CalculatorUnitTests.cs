@@ -108,7 +108,7 @@ namespace Calculator.Test.Unit
 
         [TestCase(2, 25)]
         [TestCase(3, 125)]
-        [TestCase(4, 750)]
+        [TestCase(4, 625)]
         public void AcumilatorPower(int c, int result)
         {
             _uut.Accumulator = 5;
