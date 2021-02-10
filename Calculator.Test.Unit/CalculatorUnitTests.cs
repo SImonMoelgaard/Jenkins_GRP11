@@ -97,7 +97,7 @@ namespace Calculator.Test.Unit
         [TestCase(2, 10)]
         [TestCase(3, 15)]
         [TestCase(5, 25)]
-        [TestCase(9, 95)]
+        [TestCase(9, 45)]
         public void AcumilatorMulti(int c, int result)
         {
             _uut.Accumulator = 5;
