@@ -1,5 +1,6 @@
 ﻿using System;
 using Calculator;
+using NSubstitute;
 using NUnit.Framework;
 
 
@@ -13,7 +14,8 @@ namespace Calculator.Test.Unit
         [SetUp]
         public void Setup()
         {
-            _uut = new Calculator();
+            _uut = Substitute.For<Calculator>();
+            //_uut = new Calculator();
         }
 
         [TestCase(3, 2, 5)]
@@ -131,7 +133,14 @@ namespace Calculator.Test.Unit
             Assert.Throws<InvalidOperationException>(() =>_uut.Clear());
         }
 
-        
+        [TestCase()]
+        public void ClearAcumilator0()
+        {
+            _uut.Accumulator = 2;
+            _uut.Clear();
+            Assert.That(_uut.Accumulator.Equals(0));
+        }
+
 
 
     }
